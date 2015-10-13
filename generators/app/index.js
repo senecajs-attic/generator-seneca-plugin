@@ -1,4 +1,6 @@
 'use strict';
+var path = require('path');
+var _ = require('lodash');
 var yeoman = require('yeoman-generator');
 var chalk = require('chalk');
 var yosay = require('yosay');
@@ -11,26 +13,53 @@ module.exports = yeoman.generators.Base.extend({
     this.log(yosay(
       'Welcome to the fantastic ' + chalk.red('Seneca Plugin') + ' generator!'
     ));
-    done();
-  },
 
+    var prompts = [{
+      type: 'input',
+      name: 'pluginname',
+      message: 'Your plugin name',
+      required: true
+    }];
+
+    this.prompt(prompts, function (props) {
+      this.pluginname = _.camelCase(props.pluginname);
+      this.foldername = _.kebabCase(props.pluginname);
+
+      done();
+    }.bind(this));
+  },
+  configuring: {
+    enforceFolderName: function () {
+      if (this.foldername !== _.last(this.destinationRoot().split(path.sep))) {
+        this.destinationRoot(this.foldername);
+      }
+
+      this.config.save();
+    }
+  },
   writing: {
     app: function () {
-      this.fs.copy(
+      var context = { pluginname: this.pluginname };
+
+      this.fs.copyTpl(
         this.templatePath('_package.json'),
-        this.destinationPath('package.json')
+        this.destinationPath('package.json'),
+        context
       );
-      this.fs.copy(
+      this.fs.copyTpl(
         this.templatePath('_readme.md'),
-        this.destinationPath('readme.md')
+        this.destinationPath('readme.md'),
+        context
       );
-      this.fs.copy(
+      this.fs.copyTpl(
         this.templatePath('lib/_index.js'),
-        this.destinationPath('lib/index.js')
+        this.destinationPath('lib/index.js'),
+        context
       );
-      this.fs.copy(
+      this.fs.copyTpl(
         this.templatePath('test/_index.js'),
-        this.destinationPath('test/index.js')
+        this.destinationPath('test/index.js'),
+        context
       );
     },
 
@@ -47,6 +76,6 @@ module.exports = yeoman.generators.Base.extend({
   },
 
   install: function () {
-    this.installDependencies();
+    this.installDependencies({ bower: false });
   }
 });

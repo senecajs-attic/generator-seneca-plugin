@@ -8,7 +8,7 @@ var os = require('os');
 describe('seneca-plugin:app', function () {
   before(function (done) {
     helpers.run(path.join(__dirname, '../generators/app'))
-      .withOptions({ skipInstall: true })
+      .withOptions({ skipInstall: true, pluginname: 'temp' })
       .on('end', done);
   });
 
