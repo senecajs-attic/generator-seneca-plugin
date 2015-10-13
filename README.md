@@ -1,4 +1,4 @@
-# generator-seneca-plugin [![Build Status](https://secure.travis-ci.org/geek/generator-seneca-plugin.png?branch=master)](https://travis-ci.org/geek/generator-seneca-plugin)
+# generator-seneca-plugin [![Build Status](https://secure.travis-ci.org/senecajs/generator-seneca-plugin.png?branch=master)](https://travis-ci.org/senecajs/generator-seneca-plugin)
 
 > [Yeoman](http://yeoman.io) generator
 
