@@ -31,7 +31,7 @@ module.exports = yeoman.generators.Base.extend({
   configuring: {
     enforceFolderName: function () {
       if (this.foldername !== _.last(this.destinationRoot().split(path.sep))) {
-        this.destinationRoot(this.foldername);
+        this.destinationRoot(path.join(this.destinationRoot(), this.foldername));
       }
 
       this.config.save();

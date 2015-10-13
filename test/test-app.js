@@ -9,6 +9,9 @@ describe('seneca-plugin:app', function () {
   before(function (done) {
     helpers.run(path.join(__dirname, '../generators/app'))
       .withOptions({ skipInstall: true, pluginname: 'temp' })
+      .inTmpDir(function (dir) {
+
+      })
       .on('end', done);
   });
 
