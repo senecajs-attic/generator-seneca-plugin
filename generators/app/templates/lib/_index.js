@@ -2,7 +2,6 @@
 
 // Load modules
 
-
 // Declare internals
 var internals = {
   name: '<%= pluginname %>',
@@ -14,7 +13,7 @@ var internals = {
 module.exports = function (options) {
   var seneca = this
 
-  var settings = seneca.util.deepextend(internals.defaults, options)
+  options = seneca.util.deepextend(internals.defaults, options)
 
   return { name: internals.name }
 }
