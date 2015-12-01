@@ -4,7 +4,7 @@
 var Code = require('code')
 var Lab = require('lab')
 var Seneca = require('seneca')
-var <%= pluginname %> = require('..')
+var <%= pascalname %> = require('..')
 
 // Shortcuts
 var lab = exports.lab = Lab.script()
@@ -14,10 +14,10 @@ var expect = Code.expect
 
 describe('<%= pluginname %>', function () {
   it('can be used by seneca', function (done) {
-    var seneca = Seneca()
+    var seneca = Seneca({ log: 'silent' })
 
     var fn = function () {
-      seneca.use(<%= pluginname %>)
+      seneca.use(<%= pascalname %>)
     }
 
     expect(fn).to.not.throw()

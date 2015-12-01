@@ -24,6 +24,7 @@ module.exports = yeoman.generators.Base.extend({
     this.prompt(prompts, function (props) {
       this.pluginname = _.kebabCase(props.pluginname)
       this.foldername = _.kebabCase(props.pluginname)
+      this.pascalname = _.capitalize(_.camelCase(props.pluginname))
 
       done()
     }.bind(this))
@@ -39,8 +40,10 @@ module.exports = yeoman.generators.Base.extend({
   },
   writing: {
     app: function () {
-
-      var context = { pluginname: this.options.pluginname || this.pluginname}
+      var context = {
+        pluginname: this.options.pluginname || this.pluginname,
+        pascalname: this.options.pascalname || this.pascalname
+      }
 
       this.fs.copyTpl(
         this.templatePath('_package.json'),
@@ -70,8 +73,16 @@ module.exports = yeoman.generators.Base.extend({
         this.destinationPath('.eslintrc')
       )
       this.fs.copy(
+        this.templatePath('gitignore'),
+        this.destinationPath('.gitignore')
+      )
+      this.fs.copy(
         this.templatePath('travis.yml'),
         this.destinationPath('.travis.yml')
+      )
+      this.fs.copy(
+        this.templatePath('LICENSE'),
+        this.destinationPath('LICENSE')
       )
     }
   },

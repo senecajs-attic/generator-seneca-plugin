@@ -22,8 +22,9 @@ To install, simply use npm. Remember you will need to install [Seneca.js][] if y
 
 ```js
 var Seneca = require('seneca')
+var <%= pascalname %> = require('<%= pluginname %>')
 
-var seneca = Seneca().use('<%= pluginname %>', {})
+var seneca = Seneca().use(<%= pascalname %>, {})
 
 seneca.ready(function () {
   // access plugin features
