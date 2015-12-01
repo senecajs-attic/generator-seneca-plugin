@@ -22,7 +22,7 @@ module.exports = yeoman.generators.Base.extend({
     }]
 
     this.prompt(prompts, function (props) {
-      this.pluginname = _.camelCase(props.pluginname)
+      this.pluginname = _.kebabCase(props.pluginname)
       this.foldername = _.kebabCase(props.pluginname)
 
       done()
