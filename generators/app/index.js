@@ -51,7 +51,7 @@ module.exports = yeoman.generators.Base.extend({
         context
       )
       this.fs.copyTpl(
-        this.templatePath('_readme.md'),
+        this.templatePath('_README.md'),
         this.destinationPath('readme.md'),
         context
       )
