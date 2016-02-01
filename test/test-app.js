@@ -28,7 +28,7 @@ describe('seneca-plugin:app', {'context-timeout': 60000, 'timeout': 180 * 1000},
       '.eslintrc',
       '.travis.yml',
       'package.json',
-      'readme.md',
+      'README.md',
       'test/index.js',
       'lib/index.js'
     ])
