@@ -6,6 +6,19 @@ var Chalk = require('chalk')
 var Yosay = require('yosay')
 
 
+var templates = [
+  ['_package.json', 'package.json'],
+  ['_README.md', 'README.md'],
+  ['lib/_index.js', 'lib/index.js'],
+  ['test/_index.js', 'test/index.js']
+]
+var files = [
+  ['eslintrc', '.eslintrc'],
+  ['gitignore', '.gitignore'],
+  ['travis.yml', '.travis.yml'],
+  ['LICENSE', 'LICENSE']
+]
+
 module.exports = Yeoman.generators.Base.extend({
   prompting: function () {
     var done = this.async()
@@ -40,54 +53,35 @@ module.exports = Yeoman.generators.Base.extend({
   },
   writing: {
     app: function () {
-      var context = {
-        pluginname: this.options.pluginname || this.pluginname,
-        pascalname: this.options.pascalname || this.pascalname
-      }
+      var gen = this
 
-      this.fs.copyTpl(
-        this.templatePath('_package.json'),
-        this.destinationPath('package.json'),
-        context
-      )
-      this.fs.copyTpl(
-        this.templatePath('_README.md'),
-        this.destinationPath('readme.md'),
-        context
-      )
-      this.fs.copyTpl(
-        this.templatePath('lib/_index.js'),
-        this.destinationPath('lib/index.js'),
-        context
-      )
-      this.fs.copyTpl(
-        this.templatePath('test/_index.js'),
-        this.destinationPath('test/index.js'),
-        context
-      )
+      var context = {
+        pluginname: gen.options.pluginname || gen.pluginname,
+        pascalname: gen.options.pascalname || gen.pascalname
+      }
+      gen.log(context)
+
+      templates.forEach(function(template) {
+        gen.fs.copyTpl(
+          gen.templatePath(template[0]),
+          gen.destinationPath(template[1]),
+          context
+        )
+      })
     },
 
     projectfiles: function () {
-      this.fs.copy(
-        this.templatePath('eslintrc'),
-        this.destinationPath('.eslintrc')
-      )
-      this.fs.copy(
-        this.templatePath('gitignore'),
-        this.destinationPath('.gitignore')
-      )
-      this.fs.copy(
-        this.templatePath('travis.yml'),
-        this.destinationPath('.travis.yml')
-      )
-      this.fs.copy(
-        this.templatePath('LICENSE'),
-        this.destinationPath('LICENSE')
-      )
+      var gen = this
+      files.forEach(function(file) {
+        gen.fs.copyTpl(
+          gen.templatePath(file[0]),
+          gen.destinationPath(file[1])
+        )
+      })
     }
   },
 
   install: function () {
-    this.installDependencies({ bower: false })
+    this.installDependencies({bower: false})
   }
 })
