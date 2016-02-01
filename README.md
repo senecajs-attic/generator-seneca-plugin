@@ -4,7 +4,9 @@
 # generator-seneca-plugin
 Lead Maintainer: [Adrien Becchis](https://github.com/AdrieanKhisbe)
 
+[![npm version][npm-badge]][npm-url]
 [![Build Status][travis-badge]][travis-url]
+[![Dependency Status][david-badge]][david-url]
 [![Gitter][gitter-badge]][gitter-url]
 
 ## Getting Started
@@ -28,9 +30,11 @@ yo seneca-plugin
 
 ### Getting To Know Yeoman
 
-Yeoman has a heart of gold. It's a person with feelings and opinions, but it's very easy to work with. If you think it's too opinionated, it can be easily convinced.
+Yeoman has a heart of gold. It's a person with feelings and opinions, but it's very easy to work with.
+ If you think it's too opinionated, it can be easily convinced.
 
-If you'd like to get to know Yeoman better and meet some of his friends, [Grunt](http://gruntjs.com) and [Bower](http://bower.io), check out the complete [Getting Started Guide](https://github.com/yeoman/yeoman/wiki/Getting-Started).
+If you'd like to get to know Yeoman better and meet some of his friends,
+ [Grunt](http://gruntjs.com) and [Bower](http://bower.io), check out the complete [Getting Started Guide](https://github.com/yeoman/yeoman/wiki/Getting-Started).
 
 ## Contributing
 The [Senecajs org][] encourage open participation. If you feel you can help in any way, be it with
@@ -39,8 +43,12 @@ documentation, examples, extra testing, or new features please get in touch.
 ## License
 Copyright Wyatt Preul and other contributors 2015, Licensed under [MIT][].
 
-[travis-badge]: https://travis-ci.org/senecajs/generator-seneca-plugin.svg
+[npm-badge]: https://img.shields.io/npm/v/generator-seneca-plugin.svg
+[npm-url]: https://npmjs.com/package/generator-seneca-plugin
+[travis-badge]: https://api.travis-ci.org/senecajs/generator-seneca-plugin.svg
 [travis-url]: https://travis-ci.org/senecajs/generator-seneca-plugin
+[david-badge]: https://david-dm.org/senecajs/generator-seneca-plugin.svg
+[david-url]: https://david-dm.org/senecajs/generator-seneca-plugin
 [gitter-badge]: https://badges.gitter.im/Join%20Chat.svg
 [gitter-url]: https://gitter.im/senecajs/seneca
 
