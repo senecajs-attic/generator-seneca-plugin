@@ -19,7 +19,7 @@ var files = [
   ['LICENSE', 'LICENSE']
 ]
 
-module.exports = Yeoman.generators.Base.extend({
+module.exports = Yeoman.Base.extend({
   prompting: function () {
     var done = this.async()
 
