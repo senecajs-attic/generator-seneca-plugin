@@ -5,7 +5,8 @@
   "main": "lib/index.js",
   "license": "MIT",
   "scripts": {
-    "test": "lab -v -L"
+    "test": "lab -vLc",
+    "lint": "lab -dL"
   },
   "keywords": [
     "seneca",

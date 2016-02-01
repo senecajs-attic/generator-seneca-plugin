@@ -11,7 +11,8 @@
     "url": "https://github.com/geek"
   },
   "scripts": {
-    "test": "lab test/*.js -r console -v -L -I makeString"
+    "test": "lab -v -L",
+    "lint": "lab -dL"
   },
   "files": [
     "generators"
