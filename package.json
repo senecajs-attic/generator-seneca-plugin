@@ -10,6 +10,12 @@
     "email": "wpreul@gmail.com",
     "url": "https://github.com/geek"
   },
+  "contributors": [
+    "Wyatt Preul (https://github.com/geek)",
+    "Dean McDonnell (https://github.com/mcdonnelldean)",
+    "Maxence Dalmais (https://github.com/maxired)",
+    "Adrien Becchis (https://github.com/AdrieanKhisbe)"
+  ],
   "scripts": {
     "test": "lab -vcL",
     "lint": "lab -dL",
