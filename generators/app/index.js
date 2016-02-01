@@ -1,17 +1,18 @@
 'use strict'
-var path = require('path')
+var Path = require('path')
 var _ = require('lodash')
-var yeoman = require('yeoman-generator')
-var chalk = require('chalk')
-var yosay = require('yosay')
+var Yeoman = require('yeoman-generator')
+var Chalk = require('chalk')
+var Yosay = require('yosay')
 
-module.exports = yeoman.generators.Base.extend({
+
+module.exports = Yeoman.generators.Base.extend({
   prompting: function () {
     var done = this.async()
 
     // Have Yeoman greet the user.
-    this.log(yosay(
-      'Welcome to the fantastic ' + chalk.red('Seneca Plugin') + ' generator!'
+    this.log(Yosay(
+      'Welcome to the fantastic ' + Chalk.red('Seneca Plugin') + ' generator!'
     ))
 
     var prompts = [{
@@ -25,14 +26,13 @@ module.exports = yeoman.generators.Base.extend({
       this.pluginname = _.kebabCase(props.pluginname)
       this.foldername = _.kebabCase(props.pluginname)
       this.pascalname = _.capitalize(_.camelCase(props.pluginname))
-
       done()
     }.bind(this))
   },
   configuring: {
     enforceFolderName: function () {
-      if (this.foldername !== _.last(this.destinationRoot().split(path.sep))) {
-        this.destinationRoot(path.join(this.destinationRoot(), this.foldername))
+      if (this.foldername !== _.last(this.destinationRoot().split(Path.sep))) {
+        this.destinationRoot(Path.join(this.destinationRoot(), this.foldername))
       }
 
       this.config.save()
