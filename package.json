@@ -25,6 +25,9 @@
   "files": [
     "generators"
   ],
+  "engines": {
+    "node": ">=4.0.0"
+  },
   "keywords": [
     "yeoman-generator",
     "seneca",
