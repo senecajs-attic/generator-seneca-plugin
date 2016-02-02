@@ -24,6 +24,7 @@ describe('seneca-plugin:app', {'context-timeout': 60000, 'timeout': 180 * 1000},
     Assert.file([
       '.eslintrc',
       '.travis.yml',
+      '.codeclimate.yml',
       'package.json',
       'README.md',
       'test/index.js',

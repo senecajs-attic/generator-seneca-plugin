@@ -16,6 +16,7 @@ const files = [
   ['a.eslintrc', '.eslintrc'],
   ['a.gitignore', '.gitignore'],
   ['a.travis.yml', '.travis.yml'],
+  ['a.codeclimate.yml', '.codeclimate.yml'],
   ['LICENSE', 'LICENSE']
 ]
 
