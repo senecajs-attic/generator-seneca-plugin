@@ -1,7 +1,7 @@
 ![Seneca](http://senecajs.org/files/assets/seneca-logo.png)
 > A [Seneca.js][] plugin
 
-# <%= pluginname %>
+# <%= pluginName %>
 
 [![Build Status][travis-badge]][travis-url]
 [![Gitter][gitter-badge]][gitter-url]
@@ -14,7 +14,7 @@ To install, simply use npm. Remember you will need to install [Seneca.js][] if y
 
 ```sh
 > npm install seneca
-> npm install <%= pluginname %>
+> npm install <%= pluginName %>
 ```
 
 
@@ -22,9 +22,9 @@ To install, simply use npm. Remember you will need to install [Seneca.js][] if y
 
 ```js
 var Seneca = require('seneca')
-var <%= pascalname %> = require('<%= pluginname %>')
+var <%= pascalName %> = require('<%= pluginName %>')
 
-var seneca = Seneca().use(<%= pascalname %>, {})
+var seneca = Seneca().use(<%= pascalName %>, {})
 
 seneca.ready(function () {
   // access plugin features
@@ -42,8 +42,8 @@ To run tests, simply use npm:
 
 
 [Seneca.js]: https://www.npmjs.com/package/seneca
-[travis-badge]: https://travis-ci.org/senecajs/<%= pluginname %>.svg
-[travis-url]: https://travis-ci.org/senecajs/<%= pluginname %>
+[travis-badge]: https://travis-ci.org/senecajs/<%= pluginName %>.svg
+[travis-url]: https://travis-ci.org/senecajs/<%= pluginName %>
 [gitter-badge]: https://badges.gitter.im/Join%20Chat.svg
 [gitter-url]: https://gitter.im/senecajs/seneca
 [standard-badge]: https://raw.githubusercontent.com/feross/standard/master/badge.png

@@ -4,7 +4,7 @@
 
 // Declare internals
 var internals = {
-  name: '<%= pluginname %>',
+  name: '<%= pluginName %>',
   defaults: {
     // Put any default plugin settings here
   }

@@ -1,6 +1,6 @@
 {
-  "name": "<%= pluginname %>",
-  "description": "Seneca plugin: <%= pluginname %>",
+  "Name": "<%= pluginName %>",
+  "description": "Seneca plugin: <%= pluginName %>",
   "version": "0.0.0",
   "main": "lib/index.js",
   "license": "MIT",
@@ -16,7 +16,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/senecajs/<%= pluginname %>.git"
+    "url": "https://github.com/senecajs/<%= pluginName %>.git"
   },
   "engines": {
     "node": ">=0.10.0"

@@ -36,16 +36,16 @@ module.exports = Yeoman.Base.extend({
     }]
 
     this.prompt(prompts, function (props) {
-      this.pluginname = _.kebabCase(props.pluginname)
-      this.foldername = _.kebabCase(props.pluginname)
-      this.pascalname = _.capitalize(_.camelCase(props.pluginname))
+      this.pluginName = _.kebabCase(props.pluginName)
+      this.folderName = _.kebabCase(props.pluginName)
+      this.pascalName = _.capitalize(_.camelCase(props.pluginName))
       done()
     }.bind(this))
   },
   configuring: {
     enforceFolderName: function () {
-      if (this.foldername !== _.last(this.destinationRoot().split(Path.sep))) {
-        this.destinationRoot(Path.join(this.destinationRoot(), this.foldername))
+      if (this.folderName !== _.last(this.destinationRoot().split(Path.sep))) {
+        this.destinationRoot(Path.join(this.destinationRoot(), this.folderName))
       }
 
       this.config.save()
@@ -54,8 +54,8 @@ module.exports = Yeoman.Base.extend({
   writing: {
     app: function () {
        const context = {
-        pluginname: this.options.pluginname || this.pluginname,
-        pascalname: this.options.pascalname || this.pascalname
+        pluginName: this.options.pluginName || this.pluginName,
+        pascalName: this.options.pascalName || this.pascalName
       }
       templates.forEach((template) => {
         this.template(template[0], template[1], context)
