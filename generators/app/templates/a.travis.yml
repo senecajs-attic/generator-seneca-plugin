@@ -13,5 +13,6 @@ cache:
 
 after_script:
   - npm run lint
+  - mkdir -p coverage
   - npm run coverage
   - npm run publish-coverage
