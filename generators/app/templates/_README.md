@@ -3,10 +3,12 @@
 
 # <%= pluginName %>
 
+[![npm version][npm-badge]][npm-url]
 [![Build Status][travis-badge]][travis-url]
+[![Coverage Status][coverage-badge]][coverage-url]
+[![Code Climate][codeclimate-badge]][codeclimate-url]
+[![Dependency Status][david-badge]][david-url]
 [![Gitter][gitter-badge]][gitter-url]
-
-[![js-standard-style][standard-badge]][standard-style]
 
 ## install
 
@@ -42,9 +44,15 @@ To run tests, simply use npm:
 
 
 [Seneca.js]: https://www.npmjs.com/package/seneca
+[npm-badge]: https://img.shields.io/npm/v/<%= pluginName %>.svg
+[npm-url]: https://npmjs.com/package/<%= pluginName %>
 [travis-badge]: https://travis-ci.org/senecajs/<%= pluginName %>.svg
 [travis-url]: https://travis-ci.org/senecajs/<%= pluginName %>
+[codeclimate-badge]: https://codeclimate.com/github/senecajs/<%= pluginName %>/badges/gpa.svg
+[codeclimate-url]: https://codeclimate.com/github/senecajs/<%= pluginName %>
+[coverage-badge]: https://coveralls.io/repos/senecajs/<%= pluginName %>/badge.svg?branch=master&service=github
+[coverage-url]: https://coveralls.io/github/senecajs/<%= pluginName %>?branch=master
+[david-badge]: https://david-dm.org/senecajs/<%= pluginName %>.svg
+[david-url]: https://david-dm.org/senecajs/<%= pluginName %>
 [gitter-badge]: https://badges.gitter.im/Join%20Chat.svg
 [gitter-url]: https://gitter.im/senecajs/seneca
-[standard-badge]: https://raw.githubusercontent.com/feross/standard/master/badge.png
-[standard-style]: https://github.com/feross/standard
