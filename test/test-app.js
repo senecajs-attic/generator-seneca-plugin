@@ -15,7 +15,7 @@ const npm = require('npm')
 describe('seneca-plugin:app', {'context-timeout': 60000, 'timeout': 180 * 1000}, () => {
   before((done) => {
     Helpers.run(Path.join(__dirname, '../generators/app'))
-      .withOptions({ skipInstall: true, pluginname: 'temp', pascalname: 'Temp' })
+      .withOptions({ skipInstall: true, pluginName: 'temp', pascalName: 'Temp' })
       .inTmpDir(function (dir) {})
       .on('end', done)
   })
