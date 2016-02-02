@@ -53,20 +53,17 @@ module.exports = Yeoman.Base.extend({
   },
   writing: {
     app: function () {
-      const gen = this
-
-      const context = {
-        pluginname: gen.options.pluginname || gen.pluginname,
-        pascalname: gen.options.pascalname || gen.pascalname
+       const context = {
+        pluginname: this.options.pluginname || this.pluginname,
+        pascalname: this.options.pascalname || this.pascalname
       }
       templates.forEach((template) => {
-        gen.template(template[0], template[1], context)
+        this.template(template[0], template[1], context)
       })
     },
 
-    projectfiles: function () {
-      const gen = this
-      files.forEach((file) => gen.copy(file[0], file[1]))
+    projectFiles: function () {
+      files.forEach((file) => this.copy(file[0], file[1]))
     }
   },
 
