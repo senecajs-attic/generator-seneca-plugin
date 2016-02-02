@@ -1,18 +1,18 @@
 'use strict'
-var Path = require('path')
-var _ = require('lodash')
-var Yeoman = require('yeoman-generator')
-var Chalk = require('chalk')
-var Yosay = require('yosay')
+const Path = require('path')
+const _ = require('lodash')
+const Yeoman = require('yeoman-generator')
+const Chalk = require('chalk')
+const Yosay = require('yosay')
 
 
-var templates = [
+const templates = [
   ['_package.json', 'package.json'],
   ['_README.md', 'README.md'],
   ['lib/_index.js', 'lib/index.js'],
   ['test/_index.js', 'test/index.js']
 ]
-var files = [
+const files = [
   ['a.eslintrc', '.eslintrc'],
   ['a.gitignore', '.gitignore'],
   ['a.travis.yml', '.travis.yml'],
@@ -21,14 +21,14 @@ var files = [
 
 module.exports = Yeoman.Base.extend({
   prompting: function () {
-    var done = this.async()
+    const done = this.async()
 
     // Have Yeoman greet the user.
     this.log(Yosay(
-      'Welcome to the fantastic ' + Chalk.red('Seneca Plugin') + ' generator!'
+      `Welcome to the fantastic ${Chalk.red('Seneca Plugin')} generator!`
     ))
 
-    var prompts = [{
+    const prompts = [{
       type: 'input',
       name: 'pluginname',
       message: 'Your plugin name',
@@ -53,15 +53,15 @@ module.exports = Yeoman.Base.extend({
   },
   writing: {
     app: function () {
-      var gen = this
+      const gen = this
 
-      var context = {
+      const context = {
         pluginname: gen.options.pluginname || gen.pluginname,
         pascalname: gen.options.pascalname || gen.pascalname
       }
       gen.log(context)
 
-      templates.forEach(function(template) {
+      templates.forEach((template) => {
         gen.fs.copyTpl(
           gen.templatePath(template[0]),
           gen.destinationPath(template[1]),
@@ -71,13 +71,9 @@ module.exports = Yeoman.Base.extend({
     },
 
     projectfiles: function () {
-      var gen = this
-      files.forEach(function(file) {
-        gen.fs.copyTpl(
-          gen.templatePath(file[0]),
-          gen.destinationPath(file[1])
-        )
-      })
+      const gen = this
+      files.forEach((file) =>
+        gen.fs.copyTpl(gen.templatePath(file[0]),gen.destinationPath(file[1])))
     }
   },
 
