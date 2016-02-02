@@ -13,9 +13,9 @@ var templates = [
   ['test/_index.js', 'test/index.js']
 ]
 var files = [
-  ['eslintrc', '.eslintrc'],
-  ['gitignore', '.gitignore'],
-  ['travis.yml', '.travis.yml'],
+  ['a.eslintrc', '.eslintrc'],
+  ['a.gitignore', '.gitignore'],
+  ['a.travis.yml', '.travis.yml'],
   ['LICENSE', 'LICENSE']
 ]
 
