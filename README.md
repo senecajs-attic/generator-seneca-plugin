@@ -6,6 +6,8 @@ Lead Maintainer: [Adrien Becchis](https://github.com/AdrieanKhisbe)
 
 [![npm version][npm-badge]][npm-url]
 [![Build Status][travis-badge]][travis-url]
+[![Coverage Status][coverage-badge]][coverage-url]
+[![Code Climate][codeclimate-badge]][codeclimate-url]
 [![Dependency Status][david-badge]][david-url]
 [![Gitter][gitter-badge]][gitter-url]
 
@@ -47,6 +49,10 @@ Copyright Wyatt Preul and other contributors 2015, Licensed under [MIT][].
 [npm-url]: https://npmjs.com/package/generator-seneca-plugin
 [travis-badge]: https://api.travis-ci.org/senecajs/generator-seneca-plugin.svg
 [travis-url]: https://travis-ci.org/senecajs/generator-seneca-plugin
+[codeclimate-badge]: https://codeclimate.com/github/senecajs/generator-seneca-plugin/badges/gpa.svg
+[codeclimate-url]: https://codeclimate.com/github/senecajs/generator-seneca-plugin
+[coverage-badge]: https://coveralls.io/repos/senecajs/generator-seneca-plugin/badge.svg?branch=master&service=github
+[coverage-url]: https://coveralls.io/github/senecajs/generator-seneca-plugin?branch=master
 [david-badge]: https://david-dm.org/senecajs/generator-seneca-plugin.svg
 [david-url]: https://david-dm.org/senecajs/generator-seneca-plugin
 [gitter-badge]: https://badges.gitter.im/Join%20Chat.svg
