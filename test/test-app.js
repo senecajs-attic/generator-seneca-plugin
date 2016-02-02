@@ -1,30 +1,27 @@
 'use strict'
 
-var path = require('path')
-var assert = require('yeoman-assert')
-var helpers = require('yeoman-test')
+const Path = require('path')
+const Assert = require('yeoman-assert')
+const Helpers = require('yeoman-test')
 
-// Load modules
-var Lab = require('lab')
+const Lab = require('lab')
+const lab = exports.lab = Lab.script()
+const describe = lab.describe
+const before = lab.before
+const it = lab.it
 
-// Shortcuts
-var lab = exports.lab = Lab.script()
-var describe = lab.describe
-var before = lab.before
-var it = lab.it
+const npm = require('npm')
 
-var npm = require('npm')
-
-describe('seneca-plugin:app', {'context-timeout': 60000, 'timeout': 180 * 1000}, function () {
-  before(function (done) {
-    helpers.run(path.join(__dirname, '../generators/app'))
+describe('seneca-plugin:app', {'context-timeout': 60000, 'timeout': 180 * 1000}, () => {
+  before((done) => {
+    Helpers.run(Path.join(__dirname, '../generators/app'))
       .withOptions({ skipInstall: true, pluginname: 'temp', pascalname: 'Temp' })
       .inTmpDir(function (dir) {})
       .on('end', done)
   })
 
-  it('creates files', function (done) {
-    assert.file([
+  it('creates files', (done) => {
+    Assert.file([
       '.eslintrc',
       '.travis.yml',
       'package.json',
@@ -35,17 +32,13 @@ describe('seneca-plugin:app', {'context-timeout': 60000, 'timeout': 180 * 1000},
     done()
   })
 
-  it('can install deps', function (done) {
-    npm.load({}, function () {
-      npm.commands.install(function (err, value) {
-        done(err, value)
-      })
+  it('can install deps', (done) => {
+    npm.load({}, () => {
+      npm.commands.install((err, value) => done(err, value))
     })
   })
 
-  it('pass generated tests', function (done) {
-    npm.commands.test(function (err, value) {
-      done(err, value)
-    })
+  it('pass generated tests', (done) => {
+    npm.commands.test((err, value) => done(err, value))
   })
 })
