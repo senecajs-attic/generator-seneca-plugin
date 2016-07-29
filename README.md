@@ -43,12 +43,12 @@ The [Senecajs org][] encourage open participation. If you feel you can help in a
 documentation, examples, extra testing, or new features please get in touch.
 
 ## License
-Copyright Wyatt Preul and other contributors 2015, Licensed under [MIT][].
+Copyright Wyatt Preul and other contributors 2015-2016, Licensed under [MIT][].
 
 [npm-badge]: https://img.shields.io/npm/v/generator-seneca-plugin.svg
 [npm-url]: https://npmjs.com/package/generator-seneca-plugin
 [travis-badge]: https://api.travis-ci.org/senecajs/generator-seneca-plugin.svg
-[travis-url]: https://travis-ci.org/senecajs/generator-seneca-plugin
+[travis-url]: https://travis-ci.org/senecajs-attic/generator-seneca-plugin
 [codeclimate-badge]: https://codeclimate.com/github/senecajs/generator-seneca-plugin/badges/gpa.svg
 [codeclimate-url]: https://codeclimate.com/github/senecajs/generator-seneca-plugin
 [coverage-badge]: https://coveralls.io/repos/senecajs/generator-seneca-plugin/badge.svg?branch=master&service=github
@@ -58,5 +58,5 @@ Copyright Wyatt Preul and other contributors 2015, Licensed under [MIT][].
 [gitter-badge]: https://badges.gitter.im/Join%20Chat.svg
 [gitter-url]: https://gitter.im/senecajs/seneca
 
-[MIT]: ./LICENSE
+[MIT]: ./LICENSE.txt
 [Senecajs org]: https://github.com/senecajs/

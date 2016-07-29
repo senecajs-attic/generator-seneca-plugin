@@ -4,7 +4,10 @@
   "description": "Yeoman generator",
   "license": "MIT",
   "main": "app/index.js",
-  "repository": "senecajs/generator-seneca-plugin",
+  "repository": {
+    "type": "git",
+    "url" :"https://github.com/senecajs-attic/generator-seneca-plugin"
+  },
   "author": {
     "name": "Wyatt Preul",
     "email": "wpreul@gmail.com",
