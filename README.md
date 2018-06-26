@@ -2,7 +2,7 @@
 > Seneca plugin generator
 
 # generator-seneca-plugin
-Lead Maintainer: [Adrien Becchis](https://github.com/AdrieanKhisbe)
+Lead Maintainer: *unmaintained*
 
 [![npm version][npm-badge]][npm-url]
 [![Build Status][travis-badge]][travis-url]
